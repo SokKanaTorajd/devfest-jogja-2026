@@ -16,17 +16,16 @@ import {
 // --- KONFIGURASI FIREBASE UNTUK DEPLOYMENT NETLIFY (OPSIONAL) ---
 // Tempelkan firebaseConfig dari Firebase Console Anda di sini saat deploy ke Netlify
 // agar Live Q&A tersinkronisasi secara real-time antar HP peserta & layar panggung.
-const CUSTOM_FIREBASE_CONFIG = null; 
-/* Contoh jika sudah diisi:
+// const CUSTOM_FIREBASE_CONFIG = null; 
 const CUSTOM_FIREBASE_CONFIG = {
-  apiKey: "AIzaSy...",
-  authDomain: "devfest-jogja-2026.firebaseapp.com",
-  projectId: "devfest-jogja-2026",
-  storageBucket: "devfest-jogja-2026.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
-*/
+
 
 // --- Firebase Initialization with Resilient Local Fallback ---
 let db = null;
